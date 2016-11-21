@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"></meta>
+<meta name="google-signin-client_id" content="984128205903-72fe9krnpp65pbeqq9skdr3ocn92buq6.apps.googleusercontent.com"></meta>
+<title>Insert title here</title>
+<script src="http://cdn.bootcss.com/jquery/2.2.3/jquery.min.js"></script>
+<script src="https://apis.google.com/js/platform.js" async="async" defer="defer"></script>
+
+</head>
+<body>
+	<a th:each="oAuthService:${oAuthServices}" th:href="@{${oAuthService.authorizationUrl}}" href="#"
+    th:text="${oAuthService.oAuthType}">github</a>
+    <div class="g-signin2" data-onsuccess="onSignIn"></div>
+    
+    <a href="#" onclick="signOut();">Sign out</a>
+</body>
+
+<script type="text/javascript">
+
+	function onSignIn(googleUser) {
+	  var profile = googleUser.getBasicProfile();
+	  console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+	  console.log('Name: ' + profile.getName());
+	  console.log('Given Name: '+profile.getGivenName());
+	  console.log('Family Name: '+profile.getFamilyName());
+	  console.log('Image URL: ' + profile.getImageUrl());
+	  console.log('Email: ' + profile.getEmail());
+	  
+	  
+	  var oauth=googleUser.getAuthResponse();
+	  
+	  console.log('oauth: ' + oauth);
+	}
+	
+	
+	function onSignIn(googleUser) {
+		  var id_token = googleUser.getAuthResponse().id_token;
+		  $.ajax({
+			  url:"",
+			  type:"POST",
+			  data:{"idtoken":id_token},
+			  success:function(data){
+				  console.log('Signed in as: ' + id_token);
+			  }
+		  });
+	}
+	
+	
+	function signOut() {
+	    var auth2 = gapi.auth2.getAuthInstance();
+	    auth2.signOut().then(function () {
+	      console.log('User signed out.');
+	    });
+	  }
+
+
+</script>
+
+</html>

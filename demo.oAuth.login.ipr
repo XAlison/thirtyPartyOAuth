@@ -91,6 +91,26 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/jeeplus/oauth/api/LinkedInApi.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/jeeplus/oauth/service/LinkedInOAuthService.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/jeeplus/oauth/service/OAuthServiceDeractor.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/jeeplus/oauth/service/OAuthServices.java">
+          <value>
+            <set />
+          </value>
+        </entry>
       </map>
     </option>
   </component>

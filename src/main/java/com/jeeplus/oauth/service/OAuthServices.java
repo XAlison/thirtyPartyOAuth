@@ -11,7 +11,7 @@ public class OAuthServices {
     
     @Autowired 
     List<OAuthServiceDeractor> oAuthServiceDeractors;
-    
+
     public OAuthServiceDeractor getOAuthService(String type){
         Optional<OAuthServiceDeractor> oAuthService = oAuthServiceDeractors.stream().filter(o -> o.getoAuthType().equals(type))
                 .findFirst();

@@ -7,7 +7,7 @@ import org.scribe.builder.api.DefaultApi20;
 import org.scribe.model.OAuthConfig;
 
 /**
- * @author yuzp17311
+ * @author hexsmith
  * @date 2016年11月21日
  * @version v1.0
  */

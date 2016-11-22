@@ -16,7 +16,7 @@ import com.jeeplus.model.OAuthUser;
 import com.jeeplus.model.User;
 
 /**
- * @author yuzp17311
+ * @author hexsmith
  * @date 2016年11月21日
  * @version v1.0
  */

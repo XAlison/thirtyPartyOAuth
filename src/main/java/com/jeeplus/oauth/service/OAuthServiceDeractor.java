@@ -20,27 +20,27 @@ public abstract class OAuthServiceDeractor implements OAuthService {
         this.authorizationUrl = oAuthService.getAuthorizationUrl(null);
     }
 
-    @Override
+
     public Token getRequestToken() {
         return oAuthService.getRequestToken();
     }
 
-    @Override
+
     public Token getAccessToken(Token requestToken, Verifier verifier) {
         return oAuthService.getAccessToken(requestToken, verifier);
     }
 
-    @Override
+
     public void signRequest(Token accessToken, OAuthRequest request) {
         oAuthService.signRequest(accessToken, request);
     }
 
-    @Override
+
     public String getVersion() {
         return oAuthService.getVersion();
     }
 
-    @Override
+
     public String getAuthorizationUrl(Token requestToken) {
         return oAuthService.getAuthorizationUrl(requestToken);
     }

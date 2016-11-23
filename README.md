@@ -18,7 +18,7 @@ Detailed changes for each release are documented in the [release notes](https://
 We have collected some [frequently asked questions](https://github.com/yuzhiping/thirtyPartyOAuth/blob/master/FAQ.md). Before reporting an issue, please search if the FAQ has the answer to your problem.
 
 ## Contribution
-Please make sure to read the [Contributing Guide](https://github.com/yuzhiping/thirtyPartyOAuth/blob/master/.github/CONTRIBUTING.md) before making a pull request.
+Please make sure to read the [Contributing Guide](https://github.com/yuzhiping/thirtyPartyOAuth/blob/master/CONTRIBUTING.md) before making a pull request.
 
 ## LICENSE
 MIT

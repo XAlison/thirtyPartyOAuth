@@ -12,7 +12,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import com.jeeplus.model.OAuthUser;
-import com.jeeplus.model.User;
 import com.jeeplus.oauth.service.OAuthServiceDeractor;
 import com.jeeplus.oauth.service.OAuthServices;
 import com.jeeplus.repository.OauthUserRepository;
@@ -52,7 +51,7 @@ public class AccountController {
     }
     
     @RequestMapping(value = "/register", method=RequestMethod.POST)
-    public String register(Model model, User user,
+    public String register(Model model, OAuthUser user,
             @RequestParam(value = "oAuthType", required = false, defaultValue = "") String oAuthType,
             @RequestParam(value = "oAuthId", required = true, defaultValue = "") String oAuthId,
             HttpServletRequest request){
@@ -67,7 +66,6 @@ public class AccountController {
         user = userRepository.save(user);
         OAuthUser oAuthUser = oauthUserRepository.findByOAuthTypeAndOAuthId(oAuthType, oAuthId);
         if(oAuthUser == null){
-            oAuthInfo.setUser(user);
             oAuthUser = oauthUserRepository.save(oAuthInfo);
         }
         request.getSession().setAttribute("oauthUser", oAuthUser);
